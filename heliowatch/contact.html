@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Helio Luxe Horloges - Helio Luxe Horloges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body class="bg-black text-white">
+    <header class='bg-black text-white py-4 shadow-lg sticky top-0 z-50'>
+    <div class='container mx-auto flex justify-between items-center px-6'>
+        <a href='index.html' class='text-4xl font-display tracking-widest uppercase'>Helio</a>
+        <nav class='hidden md:flex space-x-8 text-lg font-body'>
+            <a href='index.html' class='hover:text-gray-400 transition duration-300'>Home</a>
+            <a href='collectie.html' class='hover:text-gray-400 transition duration-300'>Collectie</a>
+            <a href='vakmanschap.html' class='hover:text-gray-400 transition duration-300'>Vakmanschap</a>
+            <a href='over.html' class='hover:text-gray-400 transition duration-300'>Over Helio</a>
+            <a href='contact.html' class='hover:text-gray-400 transition duration-300'>Contact</a>
+        </nav>
+        <button id='hamburger-menu' class='md:hidden focus:outline-none'>
+            <svg class='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path></svg>
+        </button>
+    </div>
+    <nav id='mobile-menu' class='md:hidden hidden bg-black absolute w-full left-0 py-4 text-center font-body'>
+        <a href='index.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Home</a>
+        <a href='collectie.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Collectie</a>
+        <a href='vakmanschap.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Vakmanschap</a>
+        <a href='over.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Over Helio</a>
+        <a href='contact.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Contact</a>
+    </nav>
+</header><main class='bg-white text-gray-900'>
+    <section class='py-20 bg-gray-900 text-white hero' style='background-image: url("https://loremflickr.com/1920/600/luxury,office,desk"); background-size: cover; background-position: center;'>
+        <div class='container mx-auto px-6 text-center relative z-10 py-16'>
+            <h1 class='text-6xl font-display font-bold mb-6'>Contacteer Helio</h1>
+            <p class='text-xl font-body max-w-3xl mx-auto'>Wij staan klaar om al uw vragen te beantwoorden en u te helpen bij het vinden van het perfecte Helio horloge. Neem contact met ons op voor persoonlijke assistentie.</p>
+        </div>
+    </section>
+
+    <section class='py-20 bg-gray-50' id='contact-form-section'>
+        <div class='container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12'>
+            <div>
+                <h2 class='text-5xl font-display font-bold mb-8 text-black'>Stel Uw Vraag</h2>
+                <p class='text-lg font-body leading-relaxed mb-8'>Heeft u specifieke vragen over onze collecties, vakmanschap of service? Vul het onderstaande formulier in en een van onze deskundige medewerkers zal spoedig contact met u opnemen. Wij streven ernaar om binnen 24 uur te reageren op alle aanvragen.</p>
+                <form class='space-y-6'>
+                    <div>
+                        <label for='name' class='block text-lg font-body font-semibold mb-2'>Naam</label>
+                        <input type='text' id='name' name='name' class='w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-black focus:border-transparent' placeholder='Uw volledige naam' required>
+                    </div>
+                    <div>
+                        <label for='email' class='block text-lg font-body font-semibold mb-2'>E-mailadres</label>
+                        <input type='email' id='email' name='email' class='w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-black focus:border-transparent' placeholder='uw.email@voorbeeld.com' required>
+                    </div>
+                    <div>
+                        <label for='subject' class='block text-lg font-body font-semibold mb-2'>Onderwerp</label>
+                        <input type='text' id='subject' name='subject' class='w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-black focus:border-transparent' placeholder='Waarover wilt u contact opnemen?' required>
+                    </div>
+                    <div>
+                        <label for='message' class='block text-lg font-body font-semibold mb-2'>Bericht</label>
+                        <textarea id='message' name='message' rows='6' class='w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-black focus:border-transparent' placeholder='Uw bericht...' required></textarea>
+                    </div>
+                    <button type='submit' class='w-full md:w-auto px-8 py-3 bg-black text-white text-lg font-body uppercase tracking-wider rounded-md hover:bg-gray-800 transition-colors duration-300'>Verstuur Bericht</button>
+                </form>
+            </div>
+            <div class='md:mt-0 mt-12'>
+                <h2 class='text-5xl font-display font-bold mb-8 text-black'>Bezoek Onze Boutique</h2>
+                <p class='text-lg font-body leading-relaxed mb-8'>Ervaar de luxe van Helio horloges persoonlijk in onze exclusieve boutique. Onze experts staan klaar om u te begeleiden door onze collecties en de fijne kneepjes van elk uurwerk uit te leggen. Wij ontvangen u graag op afspraak voor een persoonlijke en onvergetelijke ervaring.</p>
+                <div class='space-y-6 text-lg font-body'>
+                    <div>
+                        <p class='font-semibold'>Adres:</p>
+                        <p>Helio Boutique</p>
+                        <p>Luxe Boulevard 10</p>
+                        <p>1000 AB Genève, Zwitserland</p>
+                    </div>
+                    <div>
+                        <p class='font-semibold'>Telefoon:</p>
+                        <p>+41 (0) 22 123 4567</p>
+                    </div>
+                    <div>
+                        <p class='font-semibold'>E-mail:</p>
+                        <p><a href='mailto:info@helio.ch' class='text-black hover:underline'>info@helio.ch</a></p>
+                    </div>
+                    <div>
+                        <p class='font-semibold'>Openingstijden (op afspraak):</p>
+                        <p>Maandag - Vrijdag: 10:00 - 18:00</p>
+                        <p>Zaterdag: 11:00 - 17:00</p>
+                    </div>
+                </div>
+                <div class='mt-10'>
+                    <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.026368305886!2d6.14201731562916!3d46.20439077911674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65215c0e0e01%3A0x409b2e0c0e77d0!2sGeneva%2C%20Switzerland!5e0!3m2!1sen!2snl!4v1678912345678!5m2!1sen!2snl' width='100%' height='300' style='border:0;' allowfullscreen='' loading='lazy'></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='py-20 bg-black text-white' id='private-consultation'>
+        <div class='container mx-auto px-6 text-center'>
+            <h2 class='text-5xl font-display font-bold mb-8'>Plan Uw Privé Consultatie</h2>
+            <p class='text-xl font-body leading-relaxed mb-12 max-w-3xl mx-auto'>Voor de meest persoonlijke ervaring nodigen wij u uit voor een privé consultatie, online of in onze boutique. Onze specialisten nemen de tijd om uw wensen te begrijpen en u te adviseren over het perfecte Helio uurwerk dat bij u past.</p>
+            <a href='#' class='inline-block px-10 py-4 border-2 border-white text-white text-lg font-body uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300'>Boek een Afspraak</a>
+        </div>
+    </section>
+</main><footer class='bg-black text-white py-12'>
+    <div class='container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left font-body'>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Helio</h3>
+            <p class='text-gray-400'>Tijdloze elegantie, perfectie in elk detail. Helio staat voor de kunst van horlogemaken, met een erfenis die generaties overspant.</p>
+        </div>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Snelkoppelingen</h3>
+            <ul class='space-y-2'>
+                <li><a href='collectie.html' class='hover:text-gray-400 transition duration-300'>Onze Collectie</a></li>
+                <li><a href='vakmanschap.html' class='hover:text-gray-400 transition duration-300'>Ons Vakmanschap</a></li>
+                <li><a href='over.html' class='hover:text-gray-400 transition duration-300'>Over Ons</a></li>
+                <li><a href='contact.html' class='hover:text-gray-400 transition duration-300'>Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Volg Ons</h3>
+            <div class='flex justify-center md:justify-start space-x-6'>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-facebook-f text-2xl'></i></a>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-instagram text-2xl'></i></a>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-twitter text-2xl'></i></a>
+            </div>
+            <p class='text-gray-500 mt-6'>&copy; 2026 Helio. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        if (!section.classList.contains('hero')) {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+            observer.observe(section);
+        }
+    });
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Lato', sans-serif; }
+    .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+</body>
+</html>

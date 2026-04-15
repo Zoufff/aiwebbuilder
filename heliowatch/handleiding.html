@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handleiding voor Helio Luxe Horloges Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body class="bg-black text-white">
+    <header class='bg-black text-white py-4 shadow-lg sticky top-0 z-50'>
+    <div class='container mx-auto flex justify-between items-center px-6'>
+        <a href='index.html' class='text-4xl font-display tracking-widest uppercase'>Helio</a>
+        <nav class='hidden md:flex space-x-8 text-lg font-body'>
+            <a href='index.html' class='hover:text-gray-400 transition duration-300'>Home</a>
+            <a href='collectie.html' class='hover:text-gray-400 transition duration-300'>Collectie</a>
+            <a href='vakmanschap.html' class='hover:text-gray-400 transition duration-300'>Vakmanschap</a>
+            <a href='over.html' class='hover:text-gray-400 transition duration-300'>Over Helio</a>
+            <a href='contact.html' class='hover:text-gray-400 transition duration-300'>Contact</a>
+        </nav>
+        <button id='hamburger-menu' class='md:hidden focus:outline-none'>
+            <svg class='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path></svg>
+        </button>
+    </div>
+    <nav id='mobile-menu' class='md:hidden hidden bg-black absolute w-full left-0 py-4 text-center font-body'>
+        <a href='index.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Home</a>
+        <a href='collectie.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Collectie</a>
+        <a href='vakmanschap.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Vakmanschap</a>
+        <a href='over.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Over Helio</a>
+        <a href='contact.html' class='block py-2 text-xl hover:bg-gray-800 transition duration-300'>Contact</a>
+    </nav>
+</header><main class='bg-white text-gray-900 p-8 font-body'>
+    <div class='container mx-auto px-6 py-12'>
+        <h1 class='text-5xl font-display font-bold mb-8 text-black'>Website Handleiding: Helio Luxe Horloges</h1>
+        <p class='text-lg mb-6'>Deze handleiding biedt een gedetailleerd overzicht van de structuur, styling en functionaliteit van de Helio website. Als Elite Web Architect en Art Director is deze site ontworpen met het oog op luxe, precisie en een tijdloze esthetiek, passend bij de merkidentiteit van Helio.</p>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Algemene Structuur en Stijl</h2>
+            <p class='text-lg mb-4'>De website is opgebouwd uit standaard HTML5-elementen met Tailwind CSS voor styling. Er is gekozen voor een minimalistische, strakke lay-out om de focus op de horloges en het vakmanschap te behouden. Kleuren zijn voornamelijk zwart, wit en diverse grijstinten, aangevuld met gouden accenten (via tekstkleuren of subtiele hover-effecten) om het luxe aspect te benadrukken.</p>
+            <p class='text-lg mb-4'>Twee Google Fonts zijn geïmporteerd: 'Playfair Display' voor titels en 'Lato' voor de hoofdtekst. Dit zorgt voor een elegant en leesbaar contrast. De `font-display` klasse wordt gebruikt voor titels en `font-body` voor paragrafen en algemene tekst.</p>
+            <p class='text-lg'>Alle HTML-attributen gebruiken enkelvoudige quotes (') om compatibiliteit met JSON te garanderen. Regelovergangen in de JSON zijn weergegeven als '\n'.</p>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Navigatie (<code class='bg-gray-200 p-1 rounded'>global_header</code>)</h2>
+            <p class='text-lg mb-4'>De header is sticky aan de bovenkant van de pagina en is voorzien van een merklogo (tekstueel 'Helio') en een hoofdnavigatie. De navigatielinks leiden naar de belangrijkste pagina's van de site.</p>
+            <h3 class='text-3xl font-display font-bold mb-4 text-black'>Mobiele Navigatie (Hamburger Menu)</h3>
+            <p class='text-lg mb-4'>Voor mobiele apparaten is een hamburger-menu geïmplementeerd. Dit menu is standaard verborgen (<code class='bg-gray-200 p-1 rounded'>hidden</code> klasse) en wordt zichtbaar door te klikken op het hamburger-icoon. De JavaScript-functionaliteit hiervoor is opgenomen in de <code class='bg-gray-200 p-1 rounded'>global_footer</code>:</p>
+            <pre class='bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-4'><code class='language-js'>document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});</code></pre>
+            <p class='text-lg'>Het menu togglet de <code class='bg-gray-200 p-1 rounded'>hidden</code> klasse op het element met <code class='bg-gray-200 p-1 rounded'>id='mobile-menu'</code>.</p>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Scroll Reveal Animatie</h2>
+            <p class='text-lg mb-4'>Elke sectie (behalve de hero-sectie) op de pagina's is voorzien van een 'scroll reveal' animatie. Deze animatie maakt gebruik van de <code class='bg-gray-200 p-1 rounded'>Intersection Observer API</code> in JavaScript, toegevoegd in de <code class='bg-gray-200 p-1 rounded'>global_footer</code>.</p>
+            <p class='text-lg mb-4'>Bij het laden van de pagina krijgen alle secties (behalve de hero) de klassen <code class='bg-gray-200 p-1 rounded'>opacity-0</code> en <code class='bg-gray-200 p-1 rounded'>translate-y-10</code>. Wanneer een sectie in de viewport verschijnt (threshold 0.1), worden deze klassen verwijderd en wordt de <code class='bg-gray-200 p-1 rounded'>fade-in</code> klasse toegevoegd. De <code class='bg-gray-200 p-1 rounded'>fade-in</code> klasse (gedefinieerd in de `<style>` tag in de footer) zorgt voor een vloeiende overgang naar <code class='bg-gray-200 p-1 rounded'>opacity: 1</code> en <code class='bg-gray-200 p-1 rounded'>transform: translateY(0)</code> over 1 seconde.</p>
+            <pre class='bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-4'><code class='language-js'>const sections = document.querySelectorAll('section');
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+sections.forEach(section => {
+    if (!section.classList.contains('hero')) {
+        section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+        observer.observe(section);
+    }
+});</code></pre>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Afbeeldingen</h2>
+            <p class='text-lg mb-4'>Alle afbeeldingen zijn afkomstig van Loremflickr (<code class='bg-gray-200 p-1 rounded'>https://loremflickr.com/[W]/[H]/[keyword]</code>). Er is gezorgd voor context-specifieke Engelse zoekwoorden om relevante beelden te genereren die passen bij de luxe horloge-industrie.</p>
+            <p class='text-lg'>Voorbeeld: <code class='bg-gray-200 p-1 rounded'>https://loremflickr.com/1920/1080/luxury,watch,timepiece</code></p>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Toegankelijkheid (WCAG AAA)</h2>
+            <p class='text-lg mb-4'>De website is ontworpen met strenge WCAG AAA-richtlijnen voor contrast in gedachten:</p>
+            <ul class='list-disc list-inside ml-4 mb-4'>
+                <li class='text-lg'>Op lichte achtergronden wordt tekstkleur <code class='bg-gray-200 p-1 rounded'>#111111</code> (bijna zwart) of <code class='bg-gray-200 p-1 rounded'>#000000</code> (zwart) gebruikt.</li>
+                <li class='text-lg'>Op donkere achtergronden wordt tekstkleur <code class='bg-gray-200 p-1 rounded'>#FFFFFF</code> (wit) gebruikt.</li>
+                <li class='text-lg'>Lichtgrijs op wit of lichtblauw op wit is strikt vermeden om optimale leesbaarheid te garanderen.</li>
+            </ul>
+            <p class='text-lg'>De lettergroottes en lijnhoogtes zijn ook gekozen voor optimale leesbaarheid op diverse apparaten.</p>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Paginastructuur</h2>
+            <p class='text-lg mb-4'>De website bestaat uit vijf hoofdpagina's, elk met minimaal acht secties en gedetailleerde, merkspecifieke copy:</p>
+            <ul class='list-disc list-inside ml-4 mb-4'>
+                <li class='text-lg'><code class='bg-gray-200 p-1 rounded'>index.html</code> (Home): Introductie tot het merk, geselecteerde collecties, overzicht vakmanschap, testimonials en kernwaarden.</li>
+                <li class='text-lg'><code class='bg-gray-200 p-1 rounded'>collectie.html</code> (Collectie): Gedetailleerde presentatie van de Zenith, Luna en Apex series, inclusief de optie voor maatwerk.</li>
+                <li class='text-lg'><code class='bg-gray-200 p-1 rounded'>vakmanschap.html</code> (Vakmanschap): Diepe duik in de horlogemakerstradities, materiaalkeuze, uurwerktechniek en handafwerking.</li>
+                <li class='text-lg'><code class='bg-gray-200 p-1 rounded'>over.html</code> (Over Helio): De geschiedenis van het merk, de bedrijfsfilosofie, introductie van het team en onze duurzaamheidsinitiatieven.</li>
+                <li class='text-lg'><code class='bg-gray-200 p-1 rounded'>contact.html</code> (Contact): Contactformulier, adresgegevens van de boutique en de mogelijkheid tot het boeken van een privé consultatie.</li>
+            </ul>
+            <p class='text-lg'>Elke sectie is zorgvuldig samengesteld met menselijke, specifieke copy die de luxe en exclusiviteit van Helio benadrukt. Algemene frasen zoals 'Welkom bij' zijn vermeden.</p>
+        </section>
+
+        <section class='mb-12'>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Footer (<code class='bg-gray-200 p-1 rounded'>global_footer</code>)</h2>
+            <p class='text-lg mb-4'>De footer bevat essentiële informatie zoals een korte bedrijfsbeschrijving, snelle links naar belangrijke pagina's en links naar sociale media. Het copyright-statement is up-to-date voor het jaar 2026.</p>
+            <p class='text-lg'>De footer bevat ook de `<script>` tags voor het hamburger menu en de scroll reveal animaties, evenals de `<style>` tag voor de Google Fonts en de animatieklassen.</p>
+        </section>
+
+        <section>
+            <h2 class='text-4xl font-display font-bold mb-6 text-black'>Aanpassingen en Onderhoud</h2>
+            <p class='text-lg mb-4'>Deze website is ontworpen om eenvoudig aanpasbaar te zijn. Styling kan worden gewijzigd door de Tailwind CSS-klassen aan te passen. Content kan direct in de HTML-structuur van de JSON worden bewerkt. Voor het toevoegen van nieuwe secties, kopieer een bestaande sectie en pas de inhoud aan. Zorg ervoor dat de <code class='bg-gray-200 p-1 rounded'>id</code> van de nieuwe sectie uniek is voor de Intersection Observer.</p>
+            <p class='text-lg'>Voor verdere ontwikkeling of aanpassingen wordt aangeraden om een lokale Tailwind CSS-setup te gebruiken in plaats van de CDN-link voor optimale prestaties en aanpassingsmogelijkheden.</p>
+        </section>
+    </div>
+</main><footer class='bg-black text-white py-12'>
+    <div class='container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left font-body'>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Helio</h3>
+            <p class='text-gray-400'>Tijdloze elegantie, perfectie in elk detail. Helio staat voor de kunst van horlogemaken, met een erfenis die generaties overspant.</p>
+        </div>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Snelkoppelingen</h3>
+            <ul class='space-y-2'>
+                <li><a href='collectie.html' class='hover:text-gray-400 transition duration-300'>Onze Collectie</a></li>
+                <li><a href='vakmanschap.html' class='hover:text-gray-400 transition duration-300'>Ons Vakmanschap</a></li>
+                <li><a href='over.html' class='hover:text-gray-400 transition duration-300'>Over Ons</a></li>
+                <li><a href='contact.html' class='hover:text-gray-400 transition duration-300'>Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class='text-2xl font-display mb-4 uppercase'>Volg Ons</h3>
+            <div class='flex justify-center md:justify-start space-x-6'>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-facebook-f text-2xl'></i></a>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-instagram text-2xl'></i></a>
+                <a href='#' class='text-gray-400 hover:text-white transition duration-300'><i class='fab fa-twitter text-2xl'></i></a>
+            </div>
+            <p class='text-gray-500 mt-6'>&copy; 2026 Helio. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        if (!section.classList.contains('hero')) {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+            observer.observe(section);
+        }
+    });
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Lato', sans-serif; }
+    .fade-in { opacity: 1 !important; transform: translateY(0) !important; }
+</style>
+</body>
+</html>
