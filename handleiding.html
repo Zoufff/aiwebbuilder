@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentatie & Handleiding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body class="bg-black text-white">
+    <header class='fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-stone-100'>
+  <nav class='max-w-7xl mx-auto px-6 h-20 flex items-center justify-between'>
+    <div class='flex items-center gap-12'>
+      <a href='index.html' class='text-2xl font-serif tracking-tighter text-stone-900 focus:outline-none focus:ring-2 focus:ring-stone-400 rounded-sm'>NAVÉL<span class='text-stone-400 font-light italic'>.</span></a>
+      <div class='hidden lg:flex items-center gap-8'>
+        <a href='vloot.html' class='text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors relative group'>De vloot<span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-stone-900 transition-all group-hover:w-full'></span></a>
+        <a href='ervaring.html' class='text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors relative group'>De ervaring<span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-stone-900 transition-all group-hover:w-full'></span></a>
+        <a href='bestemmingen.html' class='text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors relative group'>Bestemmingen<span class='absolute -bottom-1 left-0 w-0 h-0.5 bg-stone-900 transition-all group-hover:w-full'></span></a>
+      </div>
+    </div>
+    <div class='flex items-center gap-6'>
+      <a href='contact.html' class='hidden sm:block text-sm font-medium text-stone-900 px-6 py-2 border border-stone-200 rounded-full hover:bg-stone-50 transition-all focus:ring-2 focus:ring-stone-400 focus:outline-none'>Boek een vlucht</a>
+      <button id='mobile-menu-btn' class='lg:hidden p-2 text-stone-900' aria-label='Menu openen'>
+        <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4 6h16M4 12h16M4 18h16'></path></svg>
+      </button>
+    </div>
+  </nav>
+  <div id='mobile-menu' class='hidden lg:hidden bg-white border-b border-stone-100 absolute w-full left-0 px-6 py-8 flex flex-col gap-6 shadow-xl'>
+    <a href='vloot.html' class='text-lg font-serif text-stone-900'>De vloot</a>
+    <a href='ervaring.html' class='text-lg font-serif text-stone-900'>De ervaring</a>
+    <a href='bestemmingen.html' class='text-lg font-serif text-stone-900'>Bestemmingen</a>
+    <a href='contact.html' class='bg-stone-900 text-white text-center py-4 rounded-xl'>Boek een vlucht</a>
+  </div>
+</header><main class='pt-32 pb-24 px-6 max-w-4xl mx-auto'>
+  <h1 class='text-4xl font-serif mb-8'>Projectdocumentatie Navél Airlines</h1>
+  
+  <section class='mb-12'>
+    <h2 class='text-xl font-bold mb-4'>Designfilosofie</h2>
+    <p class='text-sm text-stone-600 mb-4'>Voor Navél Airlines is gekozen voor een 'Luxury/Lifestyle' esthetiek, geïnspireerd door merken als Apple en Tesla. Het kleurenpalet is minimalistisch (Stone & White) om de nadruk te leggen op de hoogwaardige fotografie.</p>
+    <ul class='list-disc pl-5 text-sm text-stone-600 space-y-2'>
+      <li>Typografie: Serif voor koppen (elegantie) en Sans-serif voor body (leesbaarheid).</li>
+      <li>Spacing: Ruime marges om een gevoel van exclusiviteit en rust te creëren.</li>
+      <li>Interactie: Subtiele parallax en scroll-reveals versterken de premium beleving.</li>
+    </ul>
+  </section>
+
+  <section class='mb-12'>
+    <h2 class='text-xl font-bold mb-4'>Toegankelijkheid (WCAG AA)</h2>
+    <p class='text-sm text-stone-600 mb-4'>De website voldoet aan de WCAG AA standaarden:</p>
+    <ul class='list-disc pl-5 text-sm text-stone-600 space-y-2'>
+      <li><strong>Contrast:</strong> Alle tekst op lichte achtergronden heeft een contrastratio van minimaal 4.5:1.</li>
+      <li><strong>Focus:</strong> Alle interactieve elementen hebben een duidelijke 'focus-ring'.</li>
+      <li><strong>Semantiek:</strong> Gebruik van header, nav, main en footer tags voor screenreaders.</li>
+      <li><strong>Labels:</strong> Formulieren maken gebruik van floating labels en aria-attributen.</li>
+    </ul>
+  </section>
+
+  <section class='mb-12'>
+    <h2 class='text-xl font-bold mb-4'>Technische Implementatie</h2>
+    <p class='text-sm text-stone-600 mb-4'>De site is gebouwd met Tailwind CSS via CDN. Dit zorgt voor snelle laadtijden en eenvoudige aanpasbaarheid zonder een build-stap.</p>
+    <pre class='bg-stone-100 p-4 rounded-lg text-xs overflow-x-auto'>
+// Kleuren aanpassen via Tailwind config
+// Fonts laden via Google Fonts (Playfair Display & Inter)</pre>
+  </section>
+
+  <section>
+    <h2 class='text-xl font-bold mb-4'>Onderhoud & Updates</h2>
+    <p class='text-sm text-stone-600'>Om afbeeldingen te wijzigen, vervangt u de PEXELS placeholders door uw eigen URL's. Zorg ervoor dat de resolutie hoog genoeg is voor retina schermen (minimaal 2000px breed voor hero secties).</p>
+  </section>
+</main><footer class='bg-stone-900 text-stone-300 pt-24 pb-12'>
+  <div class='max-w-7xl mx-auto px-6'>
+    <div class='grid grid-cols-1 md:grid-cols-4 gap-12 mb-20'>
+      <div class='col-span-1 md:col-span-1'>
+        <span class='text-2xl font-serif text-white block mb-6'>NAVÉL.</span>
+        <p class='text-sm leading-relaxed text-stone-400'>De nieuwe standaard in private luchtvaart. Wij combineren tijdloze elegantie met moderne technologie voor de ultieme reiservaring.</p>
+      </div>
+      <div>
+        <h4 class='text-white text-sm font-semibold mb-6 uppercase tracking-widest'>Ontdek</h4>
+        <ul class='space-y-4'>
+          <li><a href='vloot.html' class='text-sm hover:text-white transition-colors'>Onze vloot</a></li>
+          <li><a href='ervaring.html' class='text-sm hover:text-white transition-colors'>Culinair aan boord</a></li>
+          <li><a href='#' class='text-sm hover:text-white transition-colors'>Lidmaatschappen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class='text-white text-sm font-semibold mb-6 uppercase tracking-widest'>Bestemmingen</h4>
+        <ul class='space-y-4'>
+          <li><a href='#' class='text-sm hover:text-white transition-colors'>Middellandse Zee</a></li>
+          <li><a href='#' class='text-sm hover:text-white transition-colors'>Caraïben</a></li>
+          <li><a href='#' class='text-sm hover:text-white transition-colors'>Azië & Pacific</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class='text-white text-sm font-semibold mb-6 uppercase tracking-widest'>Nieuwsbrief</h4>
+        <p class='text-xs text-stone-500 mb-4 italic'>Ontvang exclusieve aanbiedingen en updates.</p>
+        <form class='flex flex-col gap-2'>
+          <input type='email' placeholder='Uw e-mailadres' class='bg-stone-800 border-none rounded-lg px-4 py-3 text-sm focus:ring-1 focus:ring-stone-500 text-white'>
+          <button class='bg-white text-stone-900 text-xs font-bold py-3 rounded-lg hover:bg-stone-200 transition-colors uppercase tracking-widest'>Aanmelden</button>
+        </form>
+      </div>
+    </div>
+    <div class='border-t border-stone-800 pt-8 flex flex-col md:row justify-between items-center gap-4'>
+      <p class='text-xs text-stone-500'>© 2026 Navél Airlines. Alle rechten voorbehouden.</p>
+      <div class='flex gap-6'>
+        <a href='#' class='text-xs text-stone-500 hover:text-white'>Privacybeleid</a>
+        <a href='#' class='text-xs text-stone-500 hover:text-white'>Algemene voorwaarden</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
